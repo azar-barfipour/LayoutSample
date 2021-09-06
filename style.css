@@ -1,0 +1,346 @@
+@font-face {
+    font-family: Roya;
+    src: url(fonts/RoyaR.woff) format(woff);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Roya;
+    src: url(fonts/RoyaB.woff) format(woff);
+    font-weight: bold;
+    font-style: normal;
+}
+body{
+    font-family: Roya;
+    font-size: 20px;
+    direction: rtl;
+}
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+}
+input,select,textarea{
+    font-family: inherit;
+    font-size: inherit;
+}
+.clear{
+    clear: both;
+}
+#topmenu{
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+}
+.wrapper{
+    width: 1330px;
+    margin: auto;
+}
+#nav li{
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    padding: 15px 0;
+
+}
+#nav a{
+    text-decoration: none;
+    color: white;
+}
+#nav li:hover{
+    background-color: tomato;
+}
+#header{
+    background-color: #5ad;
+    margin-top: 52px;
+}
+#search{
+    float: right;
+    width: 800px;
+    color: white;
+}
+#search h1{
+   padding: 18px;
+   text-align: center;
+   font-weight: bold;
+   font-size: 50px;
+}
+#search form{
+   text-align: center;
+}
+#search input[type="search"]{
+    border-radius: 8px;
+    border-bottom: 1px solid gray;
+    padding: 5px;
+    width: 300px;
+    margin-left:10px;
+}
+#search input[type="submit"]{
+    padding: 8px 0;
+    color: white;
+    border-radius: 5px;
+    background-image: linear-gradient(#27a , #059);
+    width: 80px;
+}
+#login{
+    float: left;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#login fieldset{
+    border: 1px solid white;
+    padding: 20px;
+}
+#login legend{
+    margin-right: 10px;
+    padding: 5px;
+}
+#login label{
+    width: 100px;
+    display: inline-block;
+    font-size: 15px;
+}
+#login input{
+    vertical-align: middle;
+    direction: ltr;
+    margin: 5px;
+}
+#login input[type="text"], #login input[type="password"]{
+    border-radius: 5px;
+    width: 150px;
+    border: 1px solid black;
+    padding: 3px;
+}
+#login input[type="submit"]{
+    margin-right: 50px;
+}
+#login input[type="submit"], #login input[type="button"]{
+    width: 60px;
+    padding: 3px 0;
+    color: white;
+    border-radius: 5px;
+    background-image: linear-gradient(#27a , #059);
+    text-align: center;
+    float: right;
+}
+#main{
+    background-color: #f7f7f7;
+}
+#cats{
+    background-color: white;
+}
+#sidebar {
+    float: right;
+    width: 258px;
+    border: 1px solid #ccc;
+    margin: 30px;
+}
+#sidebar h2{
+    color: white;
+    text-align: center;
+    background-color:#47a;
+    padding: 5px;
+    font-size: 24px;
+}
+#cats li{
+    padding:8px 20px;
+}
+.item,.subitem{
+    border-bottom: 1px solid #eee;
+}
+.item,.subitem{
+    position: relative;
+}
+.item:last-child{
+    border:none;
+}
+
+#cats a{
+    text-decoration: none;
+    color: white;
+}
+.item:nth-child(2n),.subitem:nth-child(2n){
+background-color: #444;
+}
+.item:nth-child(2n+1),.subitem:nth-child(2n+1){
+background-color: #505050;
+}
+.item:hover,.subitem:hover{
+    background-color: black;
+}
+.item:hover >.submenu , .subitem:hover > .submenu{
+   visibility:visible;
+   right: 100%;
+   transition: 0.3s;
+}
+
+.submenu{
+    visibility: hidden;
+    position: absolute;
+    top: -1px;
+    right: 105%;
+    z-index: 1;
+    width: 258px;
+}
+.item span{
+    float: left;
+    margin-left: -8px;
+    font-size: 0.6em;
+}
+#content{
+    float: right;
+    width: 855px;
+    margin: 20px;
+}
+.cources h2{
+    color: #555;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+    border-bottom: 3px dotted #bbb;
+
+}
+.post{
+    border: 1px solid #bbb;
+    width: 260px;
+    height: 310px;
+    margin: 5px;
+    float: right;
+    border-radius: 5px;
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+}
+.post h3{
+    border-bottom: 1px solid #bbb;
+    padding: 5px;
+    height: 85px;
+    font-size: 18px;
+    color: #555;
+    line-height: 30px;
+}
+.post a{
+    text-decoration: none;
+}
+.post p{
+    color: white;
+    background-image: rgba(0, 0, 0, 0.6);
+    font-size: 16px;
+    line-height: 30px;
+    text-align: justify;
+    position: absolute;
+    top: -200px;
+    height: 130px;
+    padding: 10px;
+    transition: 0.3s;
+}
+.post:hover p{
+   top: 0;
+}
+.postlabel{
+border: 1px solid #ddd;
+font-size: 18px;
+border-radius: 30px;
+padding: 8px 0;
+margin: 5px;
+margin-top: 12px;
+text-align: center;
+width: 90px;
+color: green;
+background-color: #f7f7f7;
+}
+.right{
+    float: right;
+}
+.left{
+    float: left;
+}
+.post:hover{
+    
+    box-shadow: 0 0 5px -1.5px;
+}
+#footer{
+    background-color:#002;
+    color: white;
+    border-top: 3px solid orange;
+}
+#footer::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+#map{
+    float: right;
+    margin: 10px 120px;
+    width: 250px;
+}
+#map h3{
+    border-bottom: 2px solid white;
+    font-weight: bold;
+    font-weight: 26px;
+    padding: 10px;
+}
+#mapmenu li{
+    padding: 10px;
+    border-bottom: 1px dotted gray;
+    font-size: 16px;
+    color: lightgray;
+}
+#mapmenu{
+    width: 200px;
+}
+#mapmenu li:hover{
+    color: white;
+    border-bottom: 1px solid white;
+}
+#news{
+    width: 250px;
+    float: left;
+    margin: 10px 120px;
+}
+#news h3{
+    border-bottom: 2px solid white;
+    font-weight: bold;
+    font-weight: 26px;
+    padding: 10px;
+}
+#formnews{
+    text-align: center;
+}
+#formnews label{
+    display: inline-block;
+    padding: 10px;
+    vertical-align: middle;
+    color: ;
+}
+#formnews input[type="email"]{
+    width: 200px;
+    border-radius: 5px;
+    padding: 8px;
+}
+#formnews input[type="submit"]{
+    margin-top: 8px;
+    margin-right: 10px;
+    border-radius: 5px;
+    color: lightgray;
+    background-image: radial-gradient(#113 ,#446);
+    border: 1px solid lightgray;
+    width: 100px;
+    padding: 8px 0;
+    text-align: center;
+}
+#copywrite{
+    text-align: center;
+    background-color: black;
+    color: lightgray;
+    border-top: 1px solid green;
+    padding: 10px;
+    font-size: 16px;
+}
+#copywrite b{
+    color: white;
+}
